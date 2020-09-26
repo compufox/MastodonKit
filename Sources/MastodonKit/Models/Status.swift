@@ -54,11 +54,11 @@ public class Status: Codable {
     /// The reblogged Status
     public let reblog: Status?
     /// Whether this is the pinned status for the account that posted it.
-    public let pinned: Bool?
+    public private(set) var pinned: Bool?
     /// A content card with linked content.
     public let card: Card?
-	/// A poll
-	public let poll: Poll?
+    /// A poll
+    public let poll: Poll?
 
     private enum CodingKeys: String, CodingKey {
         case id
@@ -85,6 +85,10 @@ public class Status: Codable {
         case reblog
         case pinned
         case card
-		case poll
+        case poll
+    }
+
+    public func markAsPinned() {
+        pinned = true
     }
 }
