@@ -44,6 +44,14 @@
 		15CAFCDA22C1923E00444841 /* PollPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAFCD822C1923E00444841 /* PollPayload.swift */; };
 		15CAFCDB22C1923E00444841 /* PollPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAFCD822C1923E00444841 /* PollPayload.swift */; };
 		15CAFCDD22C1933A00444841 /* PollPayloadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAFCDC22C1933A00444841 /* PollPayloadTests.swift */; };
+		4D8BDF33251F66FC0078A61C /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BDF32251F66FC0078A61C /* Conversation.swift */; };
+		4D8BDF34251F66FC0078A61C /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BDF32251F66FC0078A61C /* Conversation.swift */; };
+		4D8BDF35251F66FC0078A61C /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BDF32251F66FC0078A61C /* Conversation.swift */; };
+		4D8BDF36251F66FC0078A61C /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BDF32251F66FC0078A61C /* Conversation.swift */; };
+		4D8BDF3C251F672F0078A61C /* Conversations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BDF3B251F672F0078A61C /* Conversations.swift */; };
+		4D8BDF3D251F672F0078A61C /* Conversations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BDF3B251F672F0078A61C /* Conversations.swift */; };
+		4D8BDF3E251F672F0078A61C /* Conversations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BDF3B251F672F0078A61C /* Conversations.swift */; };
+		4D8BDF3F251F672F0078A61C /* Conversations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BDF3B251F672F0078A61C /* Conversations.swift */; };
 		62864F10213AF68900823C8A /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Client.swift */; };
 		62864F11213AF68900823C8A /* ClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ClientError.swift */; };
 		62864F12213AF68900823C8A /* ClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* ClientType.swift */; };
@@ -340,6 +348,8 @@
 		15861D2922B8451800C37885 /* PollsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollsTests.swift; sourceTree = "<group>"; };
 		15CAFCD822C1923E00444841 /* PollPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollPayload.swift; sourceTree = "<group>"; };
 		15CAFCDC22C1933A00444841 /* PollPayloadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollPayloadTests.swift; sourceTree = "<group>"; };
+		4D8BDF32251F66FC0078A61C /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		4D8BDF3B251F672F0078A61C /* Conversations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversations.swift; sourceTree = "<group>"; };
 		62864F50213AF68900823C8A /* MastodonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MastodonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		629A4B0E213AF5B100A6386E /* MastodonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MastodonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"MastodonKit::MastodonKit::Product" /* MastodonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MastodonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -633,6 +643,7 @@
 				OBJ_45 /* Status.swift */,
 				OBJ_46 /* Tag.swift */,
 				OBJ_47 /* Visibility.swift */,
+				4D8BDF32251F66FC0078A61C /* Conversation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -651,6 +662,7 @@
 		OBJ_54 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				4D8BDF3B251F672F0078A61C /* Conversations.swift */,
 				OBJ_55 /* Accounts.swift */,
 				OBJ_56 /* Blocks.swift */,
 				OBJ_57 /* Clients.swift */,
@@ -966,6 +978,7 @@
 				153B23AE23467CE100A317A2 /* FutureTask.swift in Sources */,
 				154E44F522AE6EDB00F9B815 /* Filters.swift in Sources */,
 				62864F11213AF68900823C8A /* ClientError.swift in Sources */,
+				4D8BDF3E251F672F0078A61C /* Conversations.swift in Sources */,
 				62864F12213AF68900823C8A /* ClientType.swift in Sources */,
 				62864F13213AF68900823C8A /* CharacterSet.swift in Sources */,
 				62864F14213AF68900823C8A /* Data.swift in Sources */,
@@ -981,6 +994,7 @@
 				62864F1E213AF68900823C8A /* AccessScope.swift in Sources */,
 				62864F1F213AF68900823C8A /* Account.swift in Sources */,
 				62864F20213AF68900823C8A /* Application.swift in Sources */,
+				4D8BDF35251F66FC0078A61C /* Conversation.swift in Sources */,
 				62864F21213AF68900823C8A /* Attachment.swift in Sources */,
 				62864F22213AF68900823C8A /* AttachmentType.swift in Sources */,
 				62864F23213AF68900823C8A /* Card.swift in Sources */,
@@ -1043,6 +1057,7 @@
 				153B23AD23467CE100A317A2 /* FutureTask.swift in Sources */,
 				154E44F422AE6EDB00F9B815 /* Filters.swift in Sources */,
 				629A4ACF213AF5B100A6386E /* ClientError.swift in Sources */,
+				4D8BDF3D251F672F0078A61C /* Conversations.swift in Sources */,
 				629A4AD0213AF5B100A6386E /* ClientType.swift in Sources */,
 				629A4AD1213AF5B100A6386E /* CharacterSet.swift in Sources */,
 				629A4AD2213AF5B100A6386E /* Data.swift in Sources */,
@@ -1058,6 +1073,7 @@
 				629A4ADC213AF5B100A6386E /* AccessScope.swift in Sources */,
 				629A4ADD213AF5B100A6386E /* Account.swift in Sources */,
 				629A4ADE213AF5B100A6386E /* Application.swift in Sources */,
+				4D8BDF34251F66FC0078A61C /* Conversation.swift in Sources */,
 				629A4ADF213AF5B100A6386E /* Attachment.swift in Sources */,
 				629A4AE0213AF5B100A6386E /* AttachmentType.swift in Sources */,
 				629A4AE1213AF5B100A6386E /* Card.swift in Sources */,
@@ -1120,6 +1136,7 @@
 				153B23AC23467CE100A317A2 /* FutureTask.swift in Sources */,
 				154E44F322AE6EDB00F9B815 /* Filters.swift in Sources */,
 				OBJ_146 /* ClientError.swift in Sources */,
+				4D8BDF3C251F672F0078A61C /* Conversations.swift in Sources */,
 				OBJ_147 /* ClientType.swift in Sources */,
 				OBJ_148 /* CharacterSet.swift in Sources */,
 				OBJ_149 /* Data.swift in Sources */,
@@ -1135,6 +1152,7 @@
 				OBJ_159 /* AccessScope.swift in Sources */,
 				OBJ_160 /* Account.swift in Sources */,
 				OBJ_161 /* Application.swift in Sources */,
+				4D8BDF33251F66FC0078A61C /* Conversation.swift in Sources */,
 				OBJ_162 /* Attachment.swift in Sources */,
 				OBJ_163 /* AttachmentType.swift in Sources */,
 				OBJ_164 /* Card.swift in Sources */,
@@ -1233,9 +1251,11 @@
 				OBJ_256 /* StringsTests.swift in Sources */,
 				OBJ_257 /* TagTests.swift in Sources */,
 				OBJ_258 /* VisibilityTests.swift in Sources */,
+				4D8BDF36251F66FC0078A61C /* Conversation.swift in Sources */,
 				OBJ_259 /* PaginationItemTests.swift in Sources */,
 				OBJ_260 /* PaginationTests.swift in Sources */,
 				OBJ_261 /* ParameterTests.swift in Sources */,
+				4D8BDF3F251F672F0078A61C /* Conversations.swift in Sources */,
 				OBJ_262 /* PayloadTests.swift in Sources */,
 				OBJ_263 /* RequestRangeTests.swift in Sources */,
 				OBJ_264 /* AccountsTests.swift in Sources */,
