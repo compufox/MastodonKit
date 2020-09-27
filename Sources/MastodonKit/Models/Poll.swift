@@ -23,6 +23,8 @@ public class Poll: Codable {
     public let options: [PollOption]
     /// Whether the active user has voted in the poll.
     public private(set) var voted: Bool?
+    /// The current user's votes
+    public let ownVotes: [Int?]
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -32,6 +34,7 @@ public class Poll: Codable {
         case votesCount = "votes_count"
         case options
         case voted
+        case ownVotes = "own_votes"
     }
 
     public func setVoted(state: Bool) {

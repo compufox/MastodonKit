@@ -162,4 +162,35 @@ public enum Statuses {
     public static func unmute(id: String) -> Request<Status> {
         return Request<Status>(path: "/api/v1/statuses/\(id)/unmute", method: .post(.empty))
     }
+
+    public static func cancel_scheduled_status(id: String) -> Request<Empty> {
+        return Request<Empty>(path: "/api/v1/scheduled_statuses/\(id)", method: .delete(.empty))
+    }
+
+    /// Lists bookrmarked statues
+    ///
+    /// - Parameter range: The bounds used when requesting data from Mastodon.
+    /// - Returns: Request for `[Status]`.
+    public static func bookmarks(range: RequestRange = .default) -> Request<[Status]> {
+        let rangeParameters = range.parameters(limit: between(1, and: 40, default: 20)) ?? []
+        let method = HTTPMethod.get(.parameters(rangeParameters))
+
+        return Request<[Status]>(path: "/api/v1/bookmarks", method: method)
+    }
+
+    /// Bookmarks a status.
+    ///
+    /// - Parameter id: The status id.
+    /// - Returns: Request for `Status`.
+    public static func bookmark(id: String) -> Request<Status> {
+        return Request<Status>(path: "/api/v1/statuses/\(id)/bookmark", method: .post(.empty))
+    }
+
+    /// Unbookmarks a status.
+    ///
+    /// - Parameter id: The status id.
+    /// - Returns: Request for `Status`.
+    public static func unbookmark(id: String) -> Request<Status> {
+        return Request<Status>(path: "/api/v1/statuses/\(id)/unbookmark", method: .post(.empty))
+    }
 }

@@ -88,5 +88,13 @@ public class Account: Codable {
         public let note: String?
         /// Unformatted metadata fields in the user's profile, if any.
         public let fields: [VerifiableMetadataField]?
+        /// The number of follow requests for this account.
+        public let followRequestsCount: Int
+
+        private enum CodingKeys: String, CodingKey {
+            case note
+            case fields
+            case followRequestsCount = "follow_requests_count"
+        }
     }
 }
