@@ -29,4 +29,12 @@ public enum Conversations {
     public static func markRead(id: String) -> Request<Conversation> {
         return Request<Conversation>(path: "/api/v1/conversations/\(id)/read", method: .post(.empty))
     }
+
+    /// Deletes the conversation
+    ///
+    /// - Parameter id: The Conversation id.
+    /// - Returns: HTTP Status
+    public static func removeConversation(id: String) -> Request<Conversation> {
+        return Request<Conversation>(path: "/api/v1/conversations/\(id)", method: .delete(.empty))
+    }
 }
