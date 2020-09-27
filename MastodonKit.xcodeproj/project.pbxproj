@@ -52,6 +52,21 @@
 		4D8BDF3D251F672F0078A61C /* Conversations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BDF3B251F672F0078A61C /* Conversations.swift */; };
 		4D8BDF3E251F672F0078A61C /* Conversations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BDF3B251F672F0078A61C /* Conversations.swift */; };
 		4D8BDF3F251F672F0078A61C /* Conversations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BDF3B251F672F0078A61C /* Conversations.swift */; };
+		4DC164752520440C00388802 /* ScheduledStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC164742520440C00388802 /* ScheduledStatus.swift */; };
+		4DC164762520440C00388802 /* ScheduledStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC164742520440C00388802 /* ScheduledStatus.swift */; };
+		4DC164772520440C00388802 /* ScheduledStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC164742520440C00388802 /* ScheduledStatus.swift */; };
+		4DC1647D252044AE00388802 /* PushSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC1647C252044AE00388802 /* PushSubscription.swift */; };
+		4DC1647E252044AE00388802 /* PushSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC1647C252044AE00388802 /* PushSubscription.swift */; };
+		4DC1647F252044AE00388802 /* PushSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC1647C252044AE00388802 /* PushSubscription.swift */; };
+		4DC16485252044DE00388802 /* PushSubscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC16484252044DE00388802 /* PushSubscriptions.swift */; };
+		4DC16486252044DE00388802 /* PushSubscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC16484252044DE00388802 /* PushSubscriptions.swift */; };
+		4DC16487252044DE00388802 /* PushSubscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC16484252044DE00388802 /* PushSubscriptions.swift */; };
+		4DC1648D2520450C00388802 /* PushAuthKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC1648C2520450C00388802 /* PushAuthKeys.swift */; };
+		4DC1648E2520450C00388802 /* PushAuthKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC1648C2520450C00388802 /* PushAuthKeys.swift */; };
+		4DC1648F2520450C00388802 /* PushAuthKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC1648C2520450C00388802 /* PushAuthKeys.swift */; };
+		4DC164952520452900388802 /* PushData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC164942520452900388802 /* PushData.swift */; };
+		4DC164962520452900388802 /* PushData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC164942520452900388802 /* PushData.swift */; };
+		4DC164972520452900388802 /* PushData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC164942520452900388802 /* PushData.swift */; };
 		62864F10213AF68900823C8A /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Client.swift */; };
 		62864F11213AF68900823C8A /* ClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ClientError.swift */; };
 		62864F12213AF68900823C8A /* ClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* ClientType.swift */; };
@@ -350,6 +365,11 @@
 		15CAFCDC22C1933A00444841 /* PollPayloadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollPayloadTests.swift; sourceTree = "<group>"; };
 		4D8BDF32251F66FC0078A61C /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		4D8BDF3B251F672F0078A61C /* Conversations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversations.swift; sourceTree = "<group>"; };
+		4DC164742520440C00388802 /* ScheduledStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledStatus.swift; sourceTree = "<group>"; };
+		4DC1647C252044AE00388802 /* PushSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushSubscription.swift; sourceTree = "<group>"; };
+		4DC16484252044DE00388802 /* PushSubscriptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushSubscriptions.swift; sourceTree = "<group>"; };
+		4DC1648C2520450C00388802 /* PushAuthKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAuthKeys.swift; sourceTree = "<group>"; };
+		4DC164942520452900388802 /* PushData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushData.swift; sourceTree = "<group>"; };
 		62864F50213AF68900823C8A /* MastodonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MastodonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		629A4B0E213AF5B100A6386E /* MastodonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MastodonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"MastodonKit::MastodonKit::Product" /* MastodonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MastodonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -644,6 +664,8 @@
 				OBJ_46 /* Tag.swift */,
 				OBJ_47 /* Visibility.swift */,
 				4D8BDF32251F66FC0078A61C /* Conversation.swift */,
+				4DC164742520440C00388802 /* ScheduledStatus.swift */,
+				4DC1647C252044AE00388802 /* PushSubscription.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -681,6 +703,7 @@
 				OBJ_68 /* Search.swift */,
 				OBJ_69 /* Statuses.swift */,
 				OBJ_70 /* Timelines.swift */,
+				4DC16484252044DE00388802 /* PushSubscriptions.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -760,6 +783,8 @@
 				OBJ_53 /* RequestRange.swift */,
 				OBJ_54 /* Requests */,
 				OBJ_71 /* Result.swift */,
+				4DC1648C2520450C00388802 /* PushAuthKeys.swift */,
+				4DC164942520452900388802 /* PushData.swift */,
 			);
 			name = MastodonKit;
 			path = Sources/MastodonKit;
@@ -976,6 +1001,7 @@
 			files = (
 				62864F10213AF68900823C8A /* Client.swift in Sources */,
 				153B23AE23467CE100A317A2 /* FutureTask.swift in Sources */,
+				4DC164972520452900388802 /* PushData.swift in Sources */,
 				154E44F522AE6EDB00F9B815 /* Filters.swift in Sources */,
 				62864F11213AF68900823C8A /* ClientError.swift in Sources */,
 				4D8BDF3E251F672F0078A61C /* Conversations.swift in Sources */,
@@ -997,6 +1023,7 @@
 				4D8BDF35251F66FC0078A61C /* Conversation.swift in Sources */,
 				62864F21213AF68900823C8A /* Attachment.swift in Sources */,
 				62864F22213AF68900823C8A /* AttachmentType.swift in Sources */,
+				4DC16487252044DE00388802 /* PushSubscriptions.swift in Sources */,
 				62864F23213AF68900823C8A /* Card.swift in Sources */,
 				151DF8AE222DDDB700DAEA7A /* Poll.swift in Sources */,
 				62864F24213AF68900823C8A /* ClientApplication.swift in Sources */,
@@ -1014,7 +1041,9 @@
 				62864F2F213AF68900823C8A /* Report.swift in Sources */,
 				62864F30213AF68900823C8A /* RequestError.swift in Sources */,
 				62864F31213AF68900823C8A /* Results.swift in Sources */,
+				4DC164772520440C00388802 /* ScheduledStatus.swift in Sources */,
 				154E44F922AE6EE200F9B815 /* Filter.swift in Sources */,
+				4DC1648F2520450C00388802 /* PushAuthKeys.swift in Sources */,
 				62864F32213AF68900823C8A /* Status.swift in Sources */,
 				62864F33213AF68900823C8A /* Tag.swift in Sources */,
 				62864F34213AF68900823C8A /* Visibility.swift in Sources */,
@@ -1043,6 +1072,7 @@
 				155B4C8322C28A9C00C997F9 /* AnyEncodable.swift in Sources */,
 				62864F47213AF68900823C8A /* Reports.swift in Sources */,
 				62864F48213AF68900823C8A /* Search.swift in Sources */,
+				4DC1647F252044AE00388802 /* PushSubscription.swift in Sources */,
 				62864F49213AF68900823C8A /* Statuses.swift in Sources */,
 				62864F4A213AF68900823C8A /* Timelines.swift in Sources */,
 				62864F4B213AF68900823C8A /* Result.swift in Sources */,
@@ -1055,6 +1085,7 @@
 			files = (
 				629A4ACE213AF5B100A6386E /* Client.swift in Sources */,
 				153B23AD23467CE100A317A2 /* FutureTask.swift in Sources */,
+				4DC164962520452900388802 /* PushData.swift in Sources */,
 				154E44F422AE6EDB00F9B815 /* Filters.swift in Sources */,
 				629A4ACF213AF5B100A6386E /* ClientError.swift in Sources */,
 				4D8BDF3D251F672F0078A61C /* Conversations.swift in Sources */,
@@ -1076,6 +1107,7 @@
 				4D8BDF34251F66FC0078A61C /* Conversation.swift in Sources */,
 				629A4ADF213AF5B100A6386E /* Attachment.swift in Sources */,
 				629A4AE0213AF5B100A6386E /* AttachmentType.swift in Sources */,
+				4DC16486252044DE00388802 /* PushSubscriptions.swift in Sources */,
 				629A4AE1213AF5B100A6386E /* Card.swift in Sources */,
 				151DF8AD222DDDB700DAEA7A /* Poll.swift in Sources */,
 				629A4AE2213AF5B100A6386E /* ClientApplication.swift in Sources */,
@@ -1093,7 +1125,9 @@
 				629A4AED213AF5B100A6386E /* Report.swift in Sources */,
 				629A4AEE213AF5B100A6386E /* RequestError.swift in Sources */,
 				629A4AEF213AF5B100A6386E /* Results.swift in Sources */,
+				4DC164762520440C00388802 /* ScheduledStatus.swift in Sources */,
 				154E44F822AE6EE200F9B815 /* Filter.swift in Sources */,
+				4DC1648E2520450C00388802 /* PushAuthKeys.swift in Sources */,
 				629A4AF0213AF5B100A6386E /* Status.swift in Sources */,
 				629A4AF1213AF5B100A6386E /* Tag.swift in Sources */,
 				629A4AF2213AF5B100A6386E /* Visibility.swift in Sources */,
@@ -1122,6 +1156,7 @@
 				155B4C8222C28A9C00C997F9 /* AnyEncodable.swift in Sources */,
 				629A4B05213AF5B100A6386E /* Reports.swift in Sources */,
 				629A4B06213AF5B100A6386E /* Search.swift in Sources */,
+				4DC1647E252044AE00388802 /* PushSubscription.swift in Sources */,
 				629A4B07213AF5B100A6386E /* Statuses.swift in Sources */,
 				629A4B08213AF5B100A6386E /* Timelines.swift in Sources */,
 				629A4B09213AF5B100A6386E /* Result.swift in Sources */,
@@ -1134,6 +1169,7 @@
 			files = (
 				OBJ_145 /* Client.swift in Sources */,
 				153B23AC23467CE100A317A2 /* FutureTask.swift in Sources */,
+				4DC164952520452900388802 /* PushData.swift in Sources */,
 				154E44F322AE6EDB00F9B815 /* Filters.swift in Sources */,
 				OBJ_146 /* ClientError.swift in Sources */,
 				4D8BDF3C251F672F0078A61C /* Conversations.swift in Sources */,
@@ -1155,6 +1191,7 @@
 				4D8BDF33251F66FC0078A61C /* Conversation.swift in Sources */,
 				OBJ_162 /* Attachment.swift in Sources */,
 				OBJ_163 /* AttachmentType.swift in Sources */,
+				4DC16485252044DE00388802 /* PushSubscriptions.swift in Sources */,
 				OBJ_164 /* Card.swift in Sources */,
 				151DF8AC222DDDB700DAEA7A /* Poll.swift in Sources */,
 				OBJ_165 /* ClientApplication.swift in Sources */,
@@ -1172,7 +1209,9 @@
 				OBJ_176 /* Report.swift in Sources */,
 				OBJ_177 /* RequestError.swift in Sources */,
 				OBJ_178 /* Results.swift in Sources */,
+				4DC164752520440C00388802 /* ScheduledStatus.swift in Sources */,
 				154E44F722AE6EE200F9B815 /* Filter.swift in Sources */,
+				4DC1648D2520450C00388802 /* PushAuthKeys.swift in Sources */,
 				OBJ_179 /* Status.swift in Sources */,
 				OBJ_180 /* Tag.swift in Sources */,
 				OBJ_181 /* Visibility.swift in Sources */,
@@ -1201,6 +1240,7 @@
 				155B4C8122C28A9C00C997F9 /* AnyEncodable.swift in Sources */,
 				OBJ_200 /* Reports.swift in Sources */,
 				OBJ_201 /* Search.swift in Sources */,
+				4DC1647D252044AE00388802 /* PushSubscription.swift in Sources */,
 				OBJ_202 /* Statuses.swift in Sources */,
 				OBJ_203 /* Timelines.swift in Sources */,
 				OBJ_204 /* Result.swift in Sources */,
