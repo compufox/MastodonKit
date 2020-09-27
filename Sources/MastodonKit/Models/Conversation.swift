@@ -11,7 +11,7 @@ public class Conversation: Codable {
     /// The ID of the status.
     public let id: String
     /// Whether the convertsation is read.
-    public let unread: Bool
+    public private(set) var unread: Bool
     /// Accounts participating in the conversation.
     public let accounts: [Account]
     /// The last status in the conversation.
@@ -22,5 +22,9 @@ public class Conversation: Codable {
         case unread
         case accounts
         case lastStatus = "last_status"
+    }
+
+    public func setReadState(read: Bool) {
+        unread = !read
     }
 }
