@@ -76,7 +76,16 @@ public enum Statuses {
                               sensitive: Bool? = nil,
                               spoilerText: String? = nil,
                               poll: PollPayload? = nil,
-                              visibility: Visibility = .public) -> Request<Status> {
+                              visibility: Visibility = .public,
+                              scheduledAt: Date? = nil) -> Request<Status> {
+
+        var scheduledAtStringOrNil: String?
+
+        if let scheduledAtValue = scheduledAt {
+            let formatter = DateFormatter.mastodonFormatter
+            scheduledAtStringOrNil = formatter.string(from: scheduledAtValue)
+        }
+
         let parameters: [String: AnyEncodable?] = [
             "status": AnyEncodable(status),
             "in_reply_to_id": replyToID.map { AnyEncodable($0) },
@@ -84,7 +93,8 @@ public enum Statuses {
             "spoiler_text": spoilerText.map { AnyEncodable($0) },
             "visibility": AnyEncodable(visibility.rawValue),
             "media_ids": mediaIDs.isEmpty ? nil : AnyEncodable(mediaIDs),
-            "poll": poll.map { AnyEncodable($0) }
+            "poll": poll.map { AnyEncodable($0) },
+            "scheduled_at": scheduledAtStringOrNil == nil ? nil : AnyEncodable(scheduledAtStringOrNil)
         ]
 
         let method = HTTPMethod.post(.json(encoding: parameters.compactMapValues { $0 }))
