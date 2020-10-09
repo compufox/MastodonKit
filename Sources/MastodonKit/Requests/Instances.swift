@@ -23,4 +23,12 @@ public enum Instances {
     public static func customEmojis() -> Request<[Emoji]> {
         return Request<[Emoji]>(path: "/api/v1/custom_emojis")
     }
+
+    /// Fetches hashtags that are currently being used more frequently than usual.
+    ///
+    /// - Returns: Rrequest for `[Tag]`
+    public static func trends() -> Request<[Tag]> {
+        return Request<[Tag]>(path: "/api/v1/trends")
+    }
+
 }
