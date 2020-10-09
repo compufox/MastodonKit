@@ -101,6 +101,10 @@ public class Status: Codable {
         pinned = true
     }
 
+    public func markAsUnPinned() {
+        pinned = false
+    }
+
     public func setFavourited(state: Bool) {
         favourited = state
     }
