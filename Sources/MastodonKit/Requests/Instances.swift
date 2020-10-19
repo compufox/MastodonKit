@@ -26,9 +26,21 @@ public enum Instances {
 
     /// Fetches hashtags that are currently being used more frequently than usual.
     ///
-    /// - Returns: Rrequest for `[Tag]`
+    /// - Returns: Request for `[Tag]`
     public static func trends() -> Request<[Tag]> {
         return Request<[Tag]>(path: "/api/v1/trends")
     }
 
+    /// Fetches the directory of accounts for the instance
+    ///
+    /// - Returns: Request for `[Account]`.
+    public static func directory(offset: String? = "0", local: String = "false") -> Request<[Account]> {
+        let payload = Payload.parameters([
+            Parameter(name: "offset", value: offset),
+            Parameter(name: "local", value: local)
+        ])
+        let method = HTTPMethod.get(payload)
+
+        return Request<[Account]>(path: "/api/v1/directory", method: method)
+    }
 }

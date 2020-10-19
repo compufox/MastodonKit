@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Account: Codable {
+public class Account: Codable, Identifiable {
     /// The ID of the account.
     public let id: String
     /// The username of the account.

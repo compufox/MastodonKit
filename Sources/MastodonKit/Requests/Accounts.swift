@@ -228,4 +228,11 @@ public enum Accounts {
         let method = HTTPMethod.get(.parameters(rangeParameters))
         return Request<[Account]>(path: "/api/v1/follow_requests", method: method)
     }
+
+    /// Returns a server-generated suggestions on who to follow, based on previous positive interactions.
+    ///
+    /// - Returns: Request for `[Account]`.
+    public static func suggestions() -> Request<[Account]>{
+        return Request<[Account]>(path: "/api/v1/suggestions")
+    }
 }
