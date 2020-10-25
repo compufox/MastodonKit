@@ -47,6 +47,8 @@ public class Account: Codable, Identifiable {
     public let bot: Bool?
     /// Unformatted versions of some of the account fields.
     public let source: Source?
+    /// Whether this account should be shown in the directory.
+    public let discoverable: Bool?
 
     /// An array of `Emoji`.
     public var emojis: [Emoji] {
@@ -81,6 +83,7 @@ public class Account: Codable, Identifiable {
         case fields
         case bot
         case source
+        case discoverable
     }
 
     public struct Source: Codable {
