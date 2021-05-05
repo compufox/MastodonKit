@@ -37,6 +37,7 @@ public class Attachment: Codable {
         case textURL = "text_url"
         case description
         case meta
+        case blurhash
     }
 
     public struct MetaCollection: Codable {
