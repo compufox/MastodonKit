@@ -25,6 +25,8 @@ public class Attachment: Codable {
     public let description: String?
     /// Metadata about the attachment. Not always available.
     public let meta: MetaCollection?
+    /// Blurhash string for the attachment. Not always available.
+    public let blurhash: String?
 
     private enum CodingKeys: String, CodingKey {
         case id
