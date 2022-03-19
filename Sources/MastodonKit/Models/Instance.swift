@@ -29,6 +29,8 @@ public class Instance: Codable {
     public let urls: InstanceURLs?
     /// The account of the instance administrator.
     public let contactAccount: Account?
+    /// The configuration of the instance (glitchsoc entity)
+    public let configuration: InstanceConfiguration?
 
     enum CodingKeys: String, CodingKey {
         case uri
@@ -41,6 +43,75 @@ public class Instance: Codable {
         case languages
         case urls
         case contactAccount = "contact_account"
+        case configuration
+    }
+}
+
+public struct InstanceConfiguration: Codable {
+    /// Configuration values regarding statuses
+    public let statuses: InstanceStatusConfiguration
+    /// Configuration values regarding media
+    public let mediaAttachments: InstanceMediaConfiguration
+    /// Configuration values regarding polls
+    public let polls: InstancePollConfiguration
+    
+    enum CodingKeys: String, CodingKey {
+        case statuses
+        case mediaAttachments = "media_attachments"
+        case polls
+    }
+}
+
+public struct InstanceStatusConfiguration: Codable {
+    /// Max amount of characters for statuses
+    public let maxCharacters: Int
+    /// Max amount of media attachments allowed per status
+    public let maxMediaAttachments: Int
+    /// How many characters URLs will take up in status character counts
+    public let charactersReservedPerURL: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case maxCharacters = "max_characters"
+        case maxMediaAttachments = "max_media_attachments"
+        case charactersReservedPerURL = "characters_reserved_per_url"
+    }
+}
+
+public struct InstanceMediaConfiguration: Codable {
+    /// Supported MIME types
+    public let supportedMimeTypes: [String]
+    /// Size limit for a single image
+    public let imageSizeLimit: Int
+    public let imageMatrixLimit: Int
+    public let videoSizeLimit: Int
+    public let videoFrameRateLimit: Int
+    public let videoMatrixLimit: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case supportedMimeTypes = "supported_mime_types"
+        case imageSizeLimit = "image_size_limit"
+        case imageMatrixLimit = "image_matrix_limit"
+        case videoSizeLimit = "video_size_limit"
+        case videoFrameRateLimit = "video_frame_limit"
+        case videoMatrixLimit = "video_matrix_limit"
+    }
+}
+
+public struct InstancePollConfiguration: Codable {
+    /// Maximum number of options for a single poll
+    public let maxOptions: Int
+    /// Maximum characters allowed per option
+    public let maxCharactersPerOption: Int
+    /// Minimum time allowed for a poll (in seconds)
+    public let minExpiration: Int
+    /// Maximum time allowed for a poll (in seconds)
+    public let maxExpiration: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case maxOptions = "max_options"
+        case maxCharactersPerOption = "max_characters_per_option"
+        case minExpiration = "min_expiration"
+        case maxExpiration = "max_expiration"
     }
 }
 
