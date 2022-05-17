@@ -92,7 +92,7 @@ public struct InstanceMediaConfiguration: Codable {
         case imageSizeLimit = "image_size_limit"
         case imageMatrixLimit = "image_matrix_limit"
         case videoSizeLimit = "video_size_limit"
-        case videoFrameRateLimit = "video_frame_limit"
+        case videoFrameRateLimit = "video_frame_rate_limit"
         case videoMatrixLimit = "video_matrix_limit"
     }
 }
