@@ -76,15 +76,45 @@ public enum Statuses {
                               sensitive: Bool? = nil,
                               spoilerText: String? = nil,
                               poll: PollPayload? = nil,
-                              visibility: Visibility = .public,
-                              scheduledAt: Date? = nil) -> Request<Status> {
+                              visibility: Visibility = .public) -> Request<Status> {
 
-        var scheduledAtStringOrNil: String?
+        let parameters: [String: AnyEncodable?] = [
+            "status": AnyEncodable(status),
+            "in_reply_to_id": replyToID.map { AnyEncodable($0) },
+            "sensitive": (sensitive ?? false) ? AnyEncodable(true) : nil,
+            "spoiler_text": spoilerText.map { AnyEncodable($0) },
+            "visibility": AnyEncodable(visibility.rawValue),
+            "media_ids": mediaIDs.isEmpty ? nil : AnyEncodable(mediaIDs),
+            "poll": poll.map { AnyEncodable($0) }
+        ]
 
-        if let scheduledAtValue = scheduledAt {
-            let formatter = DateFormatter.mastodonFormatter
-            scheduledAtStringOrNil = formatter.string(from: scheduledAtValue)
-        }
+        let method = HTTPMethod.post(.json(encoding: parameters.compactMapValues { $0 }))
+        return Request<Status>(path: "/api/v1/statuses", method: method)
+    }
+
+    /// Posts a new status.
+    ///
+    /// - Parameters:
+    ///   - status: The text of the status.
+    ///   - replyTo: The local ID of the status you want to reply to.
+    ///   - mediaIDs: The array of media IDs to attach to the status (maximum 4).
+    ///   - sensitive: Marks the status as NSFW.
+    ///   - spoilerText: the text to be shown as a warning before the actual content.
+    ///   - visibility: The status' visibility.
+    /// - Returns: Request for `Status`.
+    public static func schedule(status: String,
+                                replyToID: String? = nil,
+                                mediaIDs: [String] = [],
+                                sensitive: Bool? = nil,
+                                spoilerText: String? = nil,
+                                poll: PollPayload? = nil,
+                                visibility: Visibility = .public,
+                                scheduledAt: Date) -> Request<ScheduledStatus> {
+
+        var scheduledAtString: String
+
+        let formatter = DateFormatter.mastodonFormatter
+        scheduledAtString = formatter.string(from: scheduledAt)
 
         let parameters: [String: AnyEncodable?] = [
             "status": AnyEncodable(status),
@@ -94,11 +124,11 @@ public enum Statuses {
             "visibility": AnyEncodable(visibility.rawValue),
             "media_ids": mediaIDs.isEmpty ? nil : AnyEncodable(mediaIDs),
             "poll": poll.map { AnyEncodable($0) },
-            "scheduled_at": scheduledAtStringOrNil == nil ? nil : AnyEncodable(scheduledAtStringOrNil)
+            "scheduled_at": AnyEncodable(scheduledAtString)
         ]
 
         let method = HTTPMethod.post(.json(encoding: parameters.compactMapValues { $0 }))
-        return Request<Status>(path: "/api/v1/statuses", method: method)
+        return Request<ScheduledStatus>(path: "/api/v1/statuses", method: method)
     }
 
     /// Deletes a status.
